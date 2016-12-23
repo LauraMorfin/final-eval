@@ -1,0 +1,28 @@
+<div class="panel panel-default" ng-controller="GamesController" ng-init="getGames()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Hottest Games</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+    	<div ng-repeat="game in games">
+        <div class= container>
+    	<!--	<div class="col-lg-6">
+    			<div class="col-lg-6 text-center">-->
+
+    				<h4>{{game.name}}</h4>
+    				<p class= "text-center">{{game.description}}</p>
+            <div class="wrapper">
+                <a class="btn btn-info" class= "btn-center" href="#!/games/details/{{game._id}}">View Details</a>
+          </div>
+          </div>
+
+    		<!--	<div class="col-lg-6">-->
+              <div class= container "img center">
+    				<img class="thumbnail" ng-src="{{game.image_url}}">
+
+    			</div>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</div>

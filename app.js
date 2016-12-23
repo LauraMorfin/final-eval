@@ -76,7 +76,7 @@ app.get('/api/games/:_id', function(req, res){
     if(err){
       throw err;
     }
-    res.json(games);
+    res.json(game);
   });
 });
 
@@ -90,7 +90,7 @@ app.post('/api/games', function(req, res){
   });
 });
 
-app.put('/api/games/:_id', function(err, game){
+app.put('/api/games/:_id', function(req, res){
   var id = req.params._id;
   var game = req.body;
   Game.updateGame(id, game, {}, function(err, game){
@@ -110,5 +110,8 @@ app.delete('/api/games/:_id', function(req, res){
     res.json(game);
   });
 });
-app.listen(5000);
-console.log('Running on port 5000...');
+// app.listen(5000);
+// console.log('Running on port 5000...');
+var myPORT = process.env.PORT || 5000;
+app.listen(myPORT);
+console.log('Running on port ' + myPORT);

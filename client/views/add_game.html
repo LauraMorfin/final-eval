@@ -1,0 +1,66 @@
+<a href="#!/game">Go Back</a>
+<div class="panel panel-default" ng-controller="GamesController" ng-init="newGame()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add Game</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+      <form ng-submit="addGame()">
+        <div class="form-group">
+          <label>Game</label>
+          <input type="text" class="form-control" ng-model="game.name" placeholder="Game">
+        </div>
+        <div class="form-group">
+          <label>Category</label>
+          <select ng-model="game.category" class="form-control">
+            <option value="Action">Action</option>
+            <option value="Fighting">Fighting</option>
+            <option value="Music and Party">Music and Party</option>
+            <option value="Role-playing">Role-playing</option>
+            <option value="Shooter">Shooter</option>
+            <option value="Simulation">Simulation</option>
+            <option value="Strategy">Strategy</option>
+            <option value="Sports">Sports</option>
+            <option value="Toys to Life">Toys to Life</option>
+          </select>
+        </div>
+        <!---<div class="form-group">
+          <label>Category</label>
+          <input type="text" class="form-control" ng-model="item.category" placeholder="Category">
+        </div>-->
+        <div class="form-group">
+          <label>By</label>
+          <input type="text" class="form-control" ng-model="game.by" placeholder="By">
+        </div>
+        <div class="form-group">
+          <label>Price</label>
+          <input type="text" class="form-control" ng-model="game.price" placeholder="Price">
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea class="form-control" ng-model="game.description" placeholder="Description"></textarea>
+        </div>
+        <div class="form-group">
+          <label>System</label>
+          <textarea class="form-control" ng-model="game.system" placeholder="System"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Rating</label>
+          <textarea class="form-control" ng-model="game.rating" placeholder="Rating"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Image URL</label>
+          <input type="text" class="form-control" ng-model="game.image_url" placeholder="Image URL">
+        </div>
+        <div class="form-group">
+          <label>Buy URL</label>
+          <input type="text" class="form-control" ng-model="game.buy_url" placeholder="Buy URL">
+        </div>
+
+        <button type="submit" class="btn btn-info">Submit</button>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>
